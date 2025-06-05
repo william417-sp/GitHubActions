@@ -1,5 +1,7 @@
 name: deploy
-on: push
+on: 
+  push:
+    branches: ["main"]
 
 jobs:
     first-job:
@@ -10,3 +12,12 @@ jobs:
 
             - name: Run a script
               run: echo "This is the first job"
+
+    second-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Hello World
+              uses: actions/checkout@v4
+
+            - name: Run a script
+              run: echo "This is the second job"
