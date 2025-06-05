@@ -1,0 +1,31 @@
+<<<<<<< HEAD:.github/workflows/jobs.yaml
+name: deploy
+on: push
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Hello World
+              uses: actions/checkout@v4
+
+            - name: Run a script
+              run: echo "This is the first job"
+=======
+name: Deploy to server
+on: push
+
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello World"
+
+  second_job:
+    needs: first_job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Another Step
+        run: echo "This runs after first_job"
+>>>>>>> origin/main:jobs.yaml
