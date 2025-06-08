@@ -14,6 +14,7 @@ jobs:
               run: echo "This is the first job"
 
     second-job:
+        if : ${{ github.ref == 'refs/heads/main' }}
         runs-on: ubuntu-latest
         steps:
             - name: Hello World
