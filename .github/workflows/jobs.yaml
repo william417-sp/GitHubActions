@@ -12,7 +12,7 @@ jobs:
 
         steps:
           - name: Hello World
-            run: "Hello World, ${{ env.NAME }}"
+            run: "Hello World, $NAME"
 
     second-job:
         needs: first-job
