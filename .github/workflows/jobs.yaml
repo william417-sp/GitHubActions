@@ -6,12 +6,13 @@ on:
 jobs:
     first-job:
         runs-on: ubuntu-latest
-        steps:
-            - name: Hello World
-              uses: actions/checkout@v4
 
-            - name: Run a script
-              run: echo "This is the first job"
+        env: 
+        Name: Codigofacilito
+
+        steps:
+             - name: Run a script
+               run: echo "Hello World, $Codigofacilito
 
     second-job:
         if : ${{ github.ref == 'refs/heads/main' }}
