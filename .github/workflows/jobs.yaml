@@ -10,9 +10,11 @@ jobs:
         env: 
          NAME: Codigofacilito
 
+        # ...existing code...
         steps:
           - name: Hello World
-            run: "Hello World, $NAME"
+            run: echo "Hello World, $NAME"
+        # ...existing code...
 
     second-job:
         needs: first-job
