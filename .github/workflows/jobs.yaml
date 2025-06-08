@@ -12,9 +12,14 @@ jobs:
 
         # ...existing code...
         steps:
-          - name: Hello World
-            run: echo "Hello World, $NAME"
+          - name: working dir
+            run: ls -al
         # ...existing code...
+          - name: Action
+            uses: actions/checkout@v4
+          
+          - name: working dir after Action
+            run: ls -al
 
     second-job:
         needs: first-job
