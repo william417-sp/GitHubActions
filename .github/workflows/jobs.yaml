@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
 
         outputs: Hello
-        salida: {{ steps.step_1.outputs.my_variable }}
+        salida: ${{ steps.step_1.outputs.my_variable }}
 
         steps:
           - name: working dir
