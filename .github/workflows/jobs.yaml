@@ -7,6 +7,10 @@ jobs:
     # ...existing code...
     first-job:
         runs-on: ubuntu-latest
+
+        outputs: Hello
+        salida: {{ steps.step_1.outputs.my_variable }}
+
         steps:
           - name: working dir
             id: step_1
@@ -17,6 +21,9 @@ jobs:
 # ...existing code...
     second-job:
         needs: first-job
+
+        env:
+        Salida: ${{ needs.first-job.outputs.salida }}
         runs-on: ubuntu-latest
         steps:
             - name: Hello World
