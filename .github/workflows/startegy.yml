@@ -13,7 +13,7 @@ jobs:
       matrix:
         message: [ "Hola", "Mundo", "Bootcamp Github Action" ]
 
-  steps:
-  - name: Print message
-    run: echo "${{ matrix.message }}"
+    steps:
+      - name: Print message
+        run: echo "${{ matrix.message }}"
       
