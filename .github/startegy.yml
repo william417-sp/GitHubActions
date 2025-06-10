@@ -15,6 +15,5 @@ jobs:
 
   steps:
   - name: Print message
-    run: |
-      echo "Mensaje: ${{ matrix.message }}"
+    run: echo "${{ matrix.message }}"
       
